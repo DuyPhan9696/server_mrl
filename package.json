@@ -1,0 +1,27 @@
+{
+  "name": "server_mrl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --inspect server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DuyPhan9696/server_mrl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DuyPhan9696/server_mrl/issues"
+  },
+  "homepage": "https://github.com/DuyPhan9696/server_mrl#readme",
+  "dependencies": {
+    "ejs": "3.1.6",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
