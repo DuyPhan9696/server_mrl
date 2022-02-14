@@ -1,27 +1,19 @@
 {
-  "name": "server_mrl",
+  "name": "login_test",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --inspect server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DuyPhan9696/server_mrl.git"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DuyPhan9696/server_mrl/issues"
-  },
-  "homepage": "https://github.com/DuyPhan9696/server_mrl#readme",
   "dependencies": {
-    "ejs": "3.1.6",
-    "express": "^4.17.2"
-  },
-  "devDependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.14.1",
+    "jsonwebtoken": "^7.3.0",
+    "mysql": "^2.13.0",
     "nodemon": "^2.0.15"
   }
 }
