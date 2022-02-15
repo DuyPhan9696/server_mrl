@@ -1,5 +1,5 @@
 const { off } = require('../dbConnection/dbConnection');
-var connection = require('../dbConnection/dbConnection');
+const connection = require('../dbConnection/dbConnection');
 
 module.exports.authenticate = function (req, res) {
     var email = req.body.email
