@@ -4,12 +4,14 @@ const app = express();
 const port = 8012;
 const routerLogin = require('./routes/loginRouter');
 const routerDon = require('./routes/donRouter')
+const routerLop = require('./routes/lopRouter')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use('/api/login', routerLogin)
 app.use('/api/don', routerDon)
+app.use('/api/lop', routerLop)
 
 /* route to handle login and registration */
 // app.post('/api/login', authenticateController.authenticate);

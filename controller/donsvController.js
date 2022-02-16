@@ -2,8 +2,10 @@ const { off } = require('../dbConnection/dbConnection');
 const connection = require('../dbConnection/dbConnection');
 
 module.exports.donsv = (req, res) => {
-    var id = req.body.id
-    connection.query('SELECT * FROM don_mrl,lop,hocphan WHERE don_mrl.malop = lop.malop AND lop.mahocphan = hocphan.mahocphan'), [id], function (error, results, fields) {
+    let id = req.body.id
+    // don_mrl.madon, don_mrl.ngaytao,lop.malop,lop.loailop,hocphan.mahocphan, hocphan.tenhocphan
+    let sql = `SELECT * FROM don_mrl INNER JOIN lop ON don_mrl.malop = lop.malop INNER JOIN hocphan ON lop.mahocphan = hocphan.mahocphan WHERE don_mrl.masinhvien = ${id}`
+    connection.query(sql, function (error, results, fields) {
         if (error) {
             res.json({
                 status: false,
@@ -23,7 +25,7 @@ module.exports.donsv = (req, res) => {
                 })
             }
         }
-    }
+    })
 }
     // connection.query('SELECT * FROM don_mrl WHERE masinhvien = ?', [id], function (error, results, fields) {
     //     results.map((row) => {

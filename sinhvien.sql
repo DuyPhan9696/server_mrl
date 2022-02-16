@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2022 at 07:14 PM
+-- Generation Time: Feb 16, 2022 at 07:15 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -24,36 +24,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hocphan`
+-- Table structure for table `sinhvien`
 --
 
-CREATE TABLE `hocphan` (
-  `mahocphan` varchar(10) NOT NULL,
-  `tenhocphan` varchar(50) NOT NULL
+CREATE TABLE `sinhvien` (
+  `id` varchar(10) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `class` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `hocphan`
+-- Dumping data for table `sinhvien`
 --
 
-INSERT INTO `hocphan` (`mahocphan`, `tenhocphan`) VALUES
-('ET4060', 'Phân tích và thiết kế hướng đối tượng'),
-('ET4245', 'Trí tuệ nhân tạo và ứng dụng'),
-('ET4260', 'Đa phương tiện'),
-('ET4361', 'Hệ thống nhúng và thiết kế giao tiếp nhúng'),
-('ET4430', 'Lập trình nâng cao'),
-('ET4550', 'An toàn bức xạ và an toàn điện trong y tế'),
-('ET4710', 'Lập trình ứng dụng di động');
+INSERT INTO `sinhvien` (`id`, `name`, `class`, `password`, `email`) VALUES
+('20172516', 'Phan Hà Duy', 'ĐTVT-10', '123456', 'duy.ph172516@sis.hust.edu.vn'),
+('20172897', 'Dương Mạnh Tuấn', 'ĐTVT-01', '123654', 'tuan.dm172897@sis.hust.edu.vn'),
+('20174226', 'Nguyễn Đình Dương', 'CKĐT-01', '123321', 'duong.nd274226@sis.hust.edu.vn');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `hocphan`
+-- Indexes for table `sinhvien`
 --
-ALTER TABLE `hocphan`
-  ADD PRIMARY KEY (`mahocphan`);
+ALTER TABLE `sinhvien`
+  ADD PRIMARY KEY (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

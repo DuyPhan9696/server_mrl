@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 14, 2022 at 07:42 PM
+-- Generation Time: Feb 16, 2022 at 07:14 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `nodejs_mrl`
+-- Database: `database_mrl`
 --
 
 -- --------------------------------------------------------
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `don_mrl` (
   `madon` varchar(15) NOT NULL,
   `malop` varchar(10) NOT NULL,
-  `ngaytao` bigint(20) NOT NULL,
+  `ngaytao` varchar(20) NOT NULL,
   `masinhvien` varchar(10) NOT NULL,
   `trangthai` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -40,13 +40,13 @@ CREATE TABLE `don_mrl` (
 --
 
 INSERT INTO `don_mrl` (`madon`, `malop`, `ngaytao`, `masinhvien`, `trangthai`) VALUES
-('34245823', '713484', 1644854578, '20172897', 'Đang xử lý'),
-('34245854', '129308', 1640019600, '20172516', 'Chưa xử lý'),
-('34245887', '129288', 1639242000, '20172897', 'Chưa xử lý'),
-('34245890', '713576', 1633971600, '20172516', 'Đã xử lý'),
-('34245896', '129278', 1641920400, '20172516', 'Đang xử lý'),
-('34245897', '129303', 1642093200, '20172897', 'Đã xử lý'),
-('34245898', '129278', 1644771600, '20172516', 'Chưa xử lý');
+('34245823', '713484', '14-02-2022', '20172897', 'Đang xử lý'),
+('34245854', '129308', '20-12-2021', '20172516', 'Chưa xử lý'),
+('34245887', '129288', '11-12-2021', '20172897', 'Chưa xử lý'),
+('34245890', '713576', '11-10-2021', '20172516', 'Đã xử lý'),
+('34245897', '129303', '13-01-2022', '20172897', 'Đã xử lý'),
+('34245898', '129278', '13-02-2022', '20172516', 'Chưa xử lý'),
+('51059433', '713576', '-2007', '20174226', 'Chưa xử lý');
 
 --
 -- Indexes for dumped tables

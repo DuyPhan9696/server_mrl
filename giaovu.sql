@@ -24,36 +24,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hocphan`
+-- Table structure for table `giaovu`
 --
 
-CREATE TABLE `hocphan` (
-  `mahocphan` varchar(10) NOT NULL,
-  `tenhocphan` varchar(50) NOT NULL
+CREATE TABLE `giaovu` (
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `phone` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `hocphan`
+-- Dumping data for table `giaovu`
 --
 
-INSERT INTO `hocphan` (`mahocphan`, `tenhocphan`) VALUES
-('ET4060', 'Phân tích và thiết kế hướng đối tượng'),
-('ET4245', 'Trí tuệ nhân tạo và ứng dụng'),
-('ET4260', 'Đa phương tiện'),
-('ET4361', 'Hệ thống nhúng và thiết kế giao tiếp nhúng'),
-('ET4430', 'Lập trình nâng cao'),
-('ET4550', 'An toàn bức xạ và an toàn điện trong y tế'),
-('ET4710', 'Lập trình ứng dụng di động');
+INSERT INTO `giaovu` (`email`, `password`, `name`, `phone`) VALUES
+('tung.vusong@hust.edu.vn', '123456', 'Vũ Song Tùng', '0976890789');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `hocphan`
+-- Indexes for table `giaovu`
 --
-ALTER TABLE `hocphan`
-  ADD PRIMARY KEY (`mahocphan`);
+ALTER TABLE `giaovu`
+  ADD PRIMARY KEY (`email`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
