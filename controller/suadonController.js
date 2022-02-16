@@ -9,13 +9,9 @@ module.exports.suadon = (req, res) => {
     let day = ("0" + date_ob.getDate()).slice(-2);
     let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
     let year = date_ob.getFullYear();
+    let date = day + "-" + month + "-" + year;
 
-
-    let date2 = day + "-" + month + "-" + year;
-    let date1 = '16-02-2022'
-    console.log(date2)
-    console.log(typeof date1)
-    let updatesql = `UPDATE don_mrl SET malop = ${malop}, ngaytao = ${date2} WHERE madon = ${madon}`
+    let updatesql = `UPDATE don_mrl SET malop = '${malop}', ngaytao = '${date}' WHERE madon = ${madon}`
     connection.query(updatesql, (err, data) => {
         if (err) throw err
         else {
