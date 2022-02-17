@@ -10,10 +10,17 @@ module.exports.suadon = (req, res) => {
     let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
     let year = date_ob.getFullYear();
     let date = day + "-" + month + "-" + year;
+
     // update sql
     let updatesql = `UPDATE don_mrl SET malop = '${malop}', ngaytao = '${date}' WHERE madon = ${madon}`
     connection.query(updatesql, (err, data) => {
-        if (err) throw err
+        if (err) {
+            console.log(err)
+            res.json({
+                status: false,
+                message: 'Mã lớp không đúng',
+            })
+        }
         else {
             res.json({
                 status: true,
