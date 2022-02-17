@@ -13,14 +13,28 @@ module.exports.themdon = (req, res) => {
     // create madon
     let madon = Math.floor(Math.random() * 90000000) + 10000000
     // insert into dababase
-    let themsql = `INSERT INTO don_mrl (madon, malop, ngaytao, masinhvien, trangthai) VALUES('${madon}','${malop}','${date}','${id}','Chưa xử lý');`
-    connection.query(themsql, (err, data) => {
+    let ktralop = `SELECT malop, masinhvien FROM don_mrl WHERE masinhvien = '${id}' AND malop = '${malop}'`
+    connection.query(ktralop, (err, result) => {
         if (err) throw err
         else {
-            res.json({
-                status: true,
-                message: 'Thêm thành công'
-            })
+            if (result.length > 0) {
+                res.json({
+                    status: false,
+                    message: 'Đơn đã tồn tại'
+                })
+            } else {
+                let themsql = `INSERT INTO don_mrl (madon, malop, ngaytao, masinhvien, trangthai) VALUES('${madon}','${malop}','${date}','${id}','Chưa xử lý');`
+                connection.query(themsql, (err, data) => {
+                    if (err) throw err
+                    else {
+                        res.json({
+                            status: true,
+                            message: 'Thêm thành công'
+                        })
+                    }
+                })
+            }
         }
     })
+
 }
