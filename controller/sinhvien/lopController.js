@@ -1,5 +1,5 @@
-const { off } = require('../dbConnection/dbConnection');
-const connection = require('../dbConnection/dbConnection');
+const { off } = require('../../dbConnection/dbConnection');
+const connection = require('../../dbConnection/dbConnection');
 
 module.exports.lop = function (req, res) {
     let malop = req.body.malop;
@@ -12,7 +12,10 @@ module.exports.lop = function (req, res) {
             })
         }
         else {
-            console.log(results)
+            res.json({
+                status: true,
+                results
+            })
         }
     })
 }

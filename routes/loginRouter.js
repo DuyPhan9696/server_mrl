@@ -1,6 +1,6 @@
 const express = require("express")
-const loginSVController = require('../controller/loginSVController')
-const loginGVController = require('../controller/loginGVController')
+const loginSVController = require('../controller/sinhvien/loginSVController')
+const loginGVController = require('../controller/giaovu/loginGVController')
 let router = express.Router()
 
 // post req loginsv

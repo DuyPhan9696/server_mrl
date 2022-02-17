@@ -1,5 +1,5 @@
 const express = require("express");
-const lopController = require('../controller/lopController');
+const lopController = require('../controller/sinhvien/lopController');
 const { post } = require("./loginRouter");
 
 let router = express.Router()

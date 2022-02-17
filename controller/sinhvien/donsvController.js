@@ -1,5 +1,5 @@
-const { off } = require('../dbConnection/dbConnection');
-const connection = require('../dbConnection/dbConnection');
+const { off } = require('../../dbConnection/dbConnection');
+const connection = require('../../dbConnection/dbConnection');
 
 module.exports.donsv = (req, res) => {
     let id = req.body.id
