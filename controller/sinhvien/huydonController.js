@@ -10,7 +10,6 @@ module.exports.huydon = (req, res) => {
         result.map((row) => {
             trangthai = row.trangthai
         })
-        console.log(trangthai)
         if (err) throw err
         else {
             if (trangthai === 'Đang xử lý' || trangthai === 'Đã xử lý') {

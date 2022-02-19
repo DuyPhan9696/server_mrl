@@ -12,7 +12,7 @@ module.exports.donsv = (req, res) => {
         }
         // don_mrl.madon, don_mrl.ngaytao,lop.malop,lop.loailop,hocphan.mahocphan, hocphan.tenhocphan
         let sql = `SELECT * FROM don_mrl INNER JOIN lop ON don_mrl.malop = lop.malop INNER JOIN hocphan ON lop.mahocphan = hocphan.mahocphan WHERE don_mrl.masinhvien = ${id}`
-        connection.query(sql, function (error, results, fields) {
+        connection.query(sql, function (error, results) {
             if (error) {
                 res.json({
                     status: false,
@@ -29,7 +29,8 @@ module.exports.donsv = (req, res) => {
                 else {
                     res.json({
                         status: true,
-                        results
+                        results,
+                        dateTime
                     })
                 }
             }
