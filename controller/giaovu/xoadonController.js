@@ -10,7 +10,7 @@ module.exports.xoadon = (req, res) => {
         else {
             res.json({
                 status: true,
-                message: 'Xoá thành công'
+                message: 'Xoá đơn thành công'
             })
         }
     })

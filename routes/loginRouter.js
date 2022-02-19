@@ -4,9 +4,9 @@ const loginGVController = require('../controller/giaovu/loginGVController')
 let router = express.Router()
 
 // post req loginsv
-router.post('/loginsv', loginSVController.authenticate)
+router.post('/loginsv', loginSVController.loginsv)
 
 //post req logingv
-router.post('/logingv', loginGVController.authenticate)
+router.post('/logingv', loginGVController.logingv)
 
 module.exports = router;

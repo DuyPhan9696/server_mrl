@@ -1,9 +1,9 @@
 const { off } = require('../../dbConnection/dbConnection');
 const connection = require('../../dbConnection/dbConnection');
 
-module.exports.authenticate = function (req, res) {
+module.exports.logingv = function (req, res) {
     var email = req.body.email
-    var password = req.body.password;
+    var password = req.body.password
     connection.query('SELECT * FROM giaovu WHERE email = ?', [email], function (error, results, fields) {
         console.log(results)
         if (error) {
