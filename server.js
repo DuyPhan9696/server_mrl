@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require('body-parser');
 const app = express();
-const port = 8012;
+const PORT = process.env.PORT || 3000;
 const routerLogin = require('./routes/loginRouter');
 const routerDon = require('./routes/donRouter')
 const routerLop = require('./routes/lopRouter')
@@ -17,6 +17,6 @@ app.use('/api/setthoihan', routerThoiHan)
 
 /* route to handle login and registration */
 // app.post('/api/login', authenticateController.authenticate);
-app.listen(8012, () => {
-    console.log(`Server at http://localhost:${port}`)
+app.listen(PORT, () => {
+    console.log(`Server at http://localhost:${PORT}`)
 });
